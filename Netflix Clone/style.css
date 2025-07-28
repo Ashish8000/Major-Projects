@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+
+:root {
+    --off-white: rgba(255, 255, 255, 0.7);
+    --netflix-color: rgb(229, 9, 20);
+}
+
+.main {
+    background-image: url(assets/images/background.jpg);
+    background-position: center center;
+
+    /* background zoom effect */
+    background-size: max(1500px, 100vw);
+
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+}
+
+/* black box over div */
+.main .box {
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    opacity: 0.8;
+
+}
+
+
+nav {
+    height: 5rem;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    background-color: aquamarine;
+
+}
+
+.logo img {
+    height: 2.5em;
+    position: relative;
+    z-index: 110;
+}
+
+ul li {
+    position: relative;
+    z-index: 110;
+    list-style: none;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: 20px;
+}
+
+.intro {
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 125rem;
+    text-align: center;
+
+}
+
+.lines {
+    margin: 0rem 5rem;
+    padding: 0rem 4rem;
+
+}
+
+.intro .lines h1 {
+    line-height: 0.3rem;
+    font-size: 4rem;
+    font-weight: 700;
+    gap: 1em;
+    color: white;
+}
+
+.intro:nth-child(2) {
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: white;
+}
+
+.email {
+    font-size: medium;
+    font-weight: 500;
+    border-radius: 0.25rem;
+    padding: 1rem 1.5rem;
+    height: auto;
+    width: 20rem;
+    border: 1px solid lightgray;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.444);
+}
+
+.opt {
+    font-size: small;
+    font-weight: 300;
+    border-radius: 0.25rem;
+    padding: 0.8rem;
+    height: 0.8rem;
+    width: 10rem;
+    border: 1px solid lightgray;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.444);
+}
+
+.SignIn {
+    background-color: var(--netflix-color);
+    border: none;
+    color: white;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+}
+
+.GetStarted button {
+    background-color: var(--netflix-color);
+    border: none;
+    color: white;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    padding: 1rem 2rem;
+
+}
+
+.GetStarted {
+    display: flex;
+    gap: 10px;
+    margin: 0px 2rem;
+
+    @media only screen and (max-width:520px) {
+        flex-direction: column;
+        margin: 0rem 3rem;
+    }
+}
+
+.arc {
+    left: -40%;
+    margin-top: 5rem;
+    position: relative;
+    width: 100%;
+}
+
+
+.curve {
+    width: 180%;
+    left: -40%;
+    height: 150px;
+
+
+    background: linear-gradient(to right, rgba(33, 13, 22, 1) 16%, rgba(184, 40, 105, 1), rgba(229, 9, 20, 1), rgba(184, 40, 105, 1), rgba(33, 13, 22, 1) 84%);
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    margin: 0 auto;
+
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+}
+
+
+.curveBack {
+
+    width: 180%;
+    left: -40%;
+    box-sizing: border-box;
+    background: radial-gradient(50% 500% at 50% -420%, rgba(64, 97, 231, 0.4) 80%, rgba(0, 0, 0, 0.1) 100%), black;
+    height: 150px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    /* transform: scaleY(1) rotate(180deg); */
+
+    margin: -5px;
+
+
+}
